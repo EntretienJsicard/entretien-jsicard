@@ -619,6 +619,11 @@ gtag('config', 'AW-18369871793');
         body: new FormData(form)
       });
       if (!response.ok) throw new Error('Réponse serveur invalide');
+      gtag('event', 'conversion', {
+  'send_to': 'AW-18369871793/h-TICKy70tscELH_t7dE',
+  'value': 1.0,
+  'currency': 'CAD'
+});
       card.classList.add('is-success');
     } catch (err) {
       errorMsg.style.display = 'block';
